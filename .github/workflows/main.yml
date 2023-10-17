@@ -14,5 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: cd front
+        run: cd front
       - name: Install packages
-        run: cd front && npm ci
+        run: npm ci
