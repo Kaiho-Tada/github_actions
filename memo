@@ -18,4 +18,21 @@ jobs:
         with:
           path: ./front
       - name: Install packages
+        run: |
+          cd front
+          npm ci
+
+
+steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          path: ./front
+      - name: Install packages
         run: npm ci
+で発生する。
+最後のrun: npm ciを
+run: |
+         cd front
+         npm ci
+に変更すればエラーが出ない。各npmの前でcd frontするのでなく1stepsの全てのrunのnpmコマンドを./frontで行いたい
