@@ -18,7 +18,4 @@ jobs:
         with:
           path: ./front
       - name: Install packages
-        working-directory: ./front
-        run: |
-          cd front
-          npm ci
+        run: npm ci
