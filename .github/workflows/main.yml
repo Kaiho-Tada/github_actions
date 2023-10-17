@@ -15,4 +15,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install packages
+        run: cd front
         run: npm ci
